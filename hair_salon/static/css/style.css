@@ -4,7 +4,7 @@
     margin: 0px;
 }
 body{
-    background-image: url('./img/background.jpg');
+    background-image: url('../img/background.jpg');
     display: flex;
     flex-direction: column; 
 }
@@ -104,6 +104,8 @@ li:hover{
     border-radius: 1px;
     background-color: black;
     text-align: center;
+    white-space: nowrap;
+
 }
 
 .options{

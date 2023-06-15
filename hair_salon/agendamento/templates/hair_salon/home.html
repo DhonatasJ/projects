@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="icons/icon.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">BEAUTY SALON</div>
+    </div>
+<div id="divAll">
+    <aside id="sidebar">
+        <p class="topics">CORTES MASCULINO</p>
+        <ul>
+            {% for opt in options1_4 %}
+            <li><a href="/agendamento/ {{ opt.id }}">{{ opt.option }}</a></li>
+            {% endfor %}
+        </ul>
+    </aside>
+    <aside id="sidebar1">
+        <p class="topics">PENTEADOS FEMININOS</p>
+        <ul>
+            {% for opt in options5_8 %}
+            <li><a href="/agendamento/ {{ opt.id }}">{{ opt.option }}</a></li>
+            {% endfor %}
+        </ul>
+    </aside>
+    <aside id="sidebar2">
+        <p class="topics">Manicure e Pedicure</p>
+        <ul>
+            {% for opt in options9_12 %} 
+            <li><a href="/agendamento/ {{ opt.id }}">{{ opt.option }}</a></li>
+            {% endfor %}
+        </ul>
+    </aside>
+</div>
+    <!-- <div class="capa">
+        <img src="img/pessoas.png" alt="">
+    </div> -->
+    <footer>
+        <address id="addr">Av. Francisco Lourenço Valdir, 446 - Vila do Conde, Barueri - SP, 06445-500</address>
+
+       <div class="boxs">
+        <a href="" class="box1">
+            <div><img src="icons/telefone.png" alt="" id="tel"></div>
+            <p class="fonts1">11 9999 0000</p> </a>
+        <a href="" class="box1">
+            <div><img src="icons/whatsapp.png" alt="" id="wpp"></div>
+            <p id="infos">CLIQUE AQUI</p></a>
+        <a href="" class="box1">
+            <div><img src="icons/instagram.png" alt="" id="insta"></div>
+            <p id="infos">@beauty_salon</p></a>
+        </div>
+    </footer>
+</body>
+
+</html>
